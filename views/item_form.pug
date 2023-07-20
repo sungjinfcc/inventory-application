@@ -5,18 +5,18 @@ block content
 
   form(method='POST' action='')
     div.form-group
-      label(for='title') Title:
+      label(for='title') Title
       input#title.form-control(type='text', placeholder='title' name='title' value=(undefined===item ? '' : item.title))
-      label(for='category') Category:
+      label(for='category') Category
       select#category.form-control(type='select' placeholder='Select category' name='category' required='true')
         - category_list.sort((a, b) => a.name.localeCompare(b.name))
         for category in category_list
           option(value=category._id, selected=(selected_category==category._id.toString() ? 'selected' : false) ) #{category.name}
-      label(for='description') Description:
+      label(for='description') Description
       input#description.form-control(type='text', placeholder='description' name='description' value=(undefined===item ? '' : item.description))
-      label(for='price') Price:
+      label(for='price') Price
       input#price.form-control(type='number', placeholder='0' name='price' value=(undefined===item ? '' : item.price.toString()))
-      label(for='numberInStock') Number in Stock:
+      label(for='numberInStock') Number in Stock
       input#numberInStock.form-control(type='number', placeholder='0' name='numberInStock' value=(undefined===item ? '' : item.numberInStock.toString()))
 
     button.btn.btn-primary(type='submit') Submit
@@ -24,4 +24,4 @@ block content
   if errors
     ul
       for error in errors
-        li!= error.msg
+        li.error!= error.msg

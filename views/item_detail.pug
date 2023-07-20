@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1 Title: #{item.title}
+  h1=item.title
 
   p #[strong Category: ]
     a(href=item.category.url) #{item.category.name}
@@ -9,8 +9,9 @@ block content
   p #[strong Price:] #{item.price} USD
   p #[strong Number In Stock:] #{item.numberInStock}
     hr
-  p
-    a(href=item.url+'/delete') Delete Item
-  p
-    a(href=item.url+'/update') Update Item
+  div.buttons
+      p.delete
+        a(href=item.url+'/delete') Delete
+      p.update
+        a(href=item.url+'/update') Update
 

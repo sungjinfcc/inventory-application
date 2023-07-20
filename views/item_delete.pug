@@ -1,10 +1,8 @@
 extends layout
 
 block content
-  h1 #{title}: #{item.title}
-  p= item.description
-
-  p Do you really want to delete this Item?
+  h1 Item: #{item.title}
+  h2 Do you really want to delete this Item?
 
   form(method='POST' action='')
       div.form-group

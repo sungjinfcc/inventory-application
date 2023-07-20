@@ -1,12 +1,78 @@
+:root {
+  --gray: ##a0a0a0;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+}
+button {
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+input,
+textarea,
+select {
+  border: none;
+  padding: 1rem 2rem;
+  background-color: #f4f4f4;
+  max-width: 600px;
+  width: 70vw;
+  font-size: 1rem;
+}
+a,
+a:visited {
+  text-decoration: none;
+  font-style: italic;
+}
+
 .navbar {
+  justify-self: start;
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  min-height: 10vh;
+}
+.navbar a {
+  font-size: 2rem;
 }
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 90vh;
+}
+.content h1 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  justify-self: start;
+}
+.content p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+.content li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.content a {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.content h2 {
+  margin-bottom: 2rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
 }
 .form-group {
   display: flex;
@@ -14,8 +80,34 @@
 }
 label {
   margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 input,
 select {
   margin-bottom: 1rem;
+}
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+.content h4 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+.keyboard {
+  margin-bottom: 2rem;
+}
+.keyboard.description {
+  font-size: 1rem;
+}
+.items-to-delete {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
 }
