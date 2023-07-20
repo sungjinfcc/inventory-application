@@ -2,4 +2,10 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to my Inventory, a very basic Express website.
+
+  p The inventory has the following record counts:
+
+  ul
+    li #[strong Item:] !{item_count}
+    li #[strong Category:] !{category_count}

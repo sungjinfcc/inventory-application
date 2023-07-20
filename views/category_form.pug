@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 #{title}
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='name') Category:
+      input#name.form-control(type='text', placeholder='45%, 60% etc.' name='name' value=(undefined===category ? '' : category.name))
+      label(for='description') Description:
+      input#description.form-control(type='text', placeholder='enter detail' name='description' value=(undefined===category ? '' : category.description))
+    button(type='submit') Submit
+
+  if errors
+   ul
+    for error in errors
+     li!= error.msg

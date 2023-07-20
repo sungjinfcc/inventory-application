@@ -1,8 +1,21 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.navbar {
+  display: flex;
+  gap: 1rem;
 }
-
-a {
-  color: #00B7FF;
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-bottom: 0.5rem;
+}
+input,
+select {
+  margin-bottom: 1rem;
 }

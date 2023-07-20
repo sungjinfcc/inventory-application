@@ -1,0 +1,24 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript", "pug"],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.exclude": {
+    "node_modules/": true,
+    ".prettierrc.json": true,
+    "package-lock.json": true,
+    "webpack.config.js": true,
+    "babel.config.js": true,
+    "README.md": true,
+    ".prettierignore": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[pug]": {
+    "editor.formatOnSave": true
+  },
+  "prettier.pugEnablePrettier": true
+}
